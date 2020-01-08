@@ -1,0 +1,31 @@
+{
+    "name": "Shopper",
+    "fields": [
+        {
+            "fieldName": "displayName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "phoneNumber",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "shoppingList",
+            "otherEntityRelationshipName": "shopper",
+            "relationshipName": "shoppingList"
+        }
+    ],
+    "changelogDate": "20200108144341",
+    "entityTableName": "shopper",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

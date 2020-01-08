@@ -1,0 +1,53 @@
+
+
+
+
+
+
+entity ShoppingList{
+	name String required
+}
+
+entity Shopper{
+	displayName String,
+    phoneNumber String
+}
+
+entity Item {
+	name String required,
+    price Double,
+    quantity Integer,
+    description String
+}
+
+entity Category{
+	name String required,
+    description String
+}
+
+relationship OneToMany{
+	Shopper{shoppingList} to ShoppingList
+}
+
+relationship OneToMany{
+	ShoppingList{items} to Item
+}
+
+relationship OneToOne{
+	ShoppingList{category} to Category
+}
+
+
+// Set pagination options
+paginate ShoppingList with infinite-scroll
+//paginate JobHistory, Employee with infinite-scroll
+//paginate Job with pagination
+
+// Use Data Transfert Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl except Employee, Job
+
+// Set an angular suffix
+// angularSuffix * with mySuffix

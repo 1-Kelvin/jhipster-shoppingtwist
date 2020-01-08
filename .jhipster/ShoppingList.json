@@ -1,0 +1,45 @@
+{
+    "name": "ShoppingList",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "category",
+            "otherEntityRelationshipName": "shoppingList",
+            "relationshipName": "category",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "item",
+            "otherEntityRelationshipName": "shoppingList",
+            "relationshipName": "items"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "shopper",
+            "otherEntityRelationshipName": "shoppingList",
+            "relationshipName": "shopper",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200108144340",
+    "entityTableName": "shopping_list",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
