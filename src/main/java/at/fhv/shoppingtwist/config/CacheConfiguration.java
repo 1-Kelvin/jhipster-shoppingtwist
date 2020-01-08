@@ -42,6 +42,12 @@ public class CacheConfiguration {
             createCache(cm, at.fhv.shoppingtwist.domain.User.class.getName());
             createCache(cm, at.fhv.shoppingtwist.domain.Authority.class.getName());
             createCache(cm, at.fhv.shoppingtwist.domain.User.class.getName() + ".authorities");
+            createCache(cm, at.fhv.shoppingtwist.domain.ShoppingList.class.getName());
+            createCache(cm, at.fhv.shoppingtwist.domain.ShoppingList.class.getName() + ".items");
+            createCache(cm, at.fhv.shoppingtwist.domain.Shopper.class.getName());
+            createCache(cm, at.fhv.shoppingtwist.domain.Shopper.class.getName() + ".shoppingLists");
+            createCache(cm, at.fhv.shoppingtwist.domain.Item.class.getName());
+            createCache(cm, at.fhv.shoppingtwist.domain.Category.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }
